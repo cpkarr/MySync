@@ -17,7 +17,7 @@ func main() {
 		os.Exit(404)
 	}
 
-	localCmd := exec.Command(path, "-a /Users/ckarr/go/src /Users/ckarr/Destination/")
+	localCmd := exec.Command(path, "-a", "/Users/ckarr/go/src", "/Users/ckarr/Destination/")
 	localErr = localCmd.Run()
 	if localErr == nil {
 		fmt.Println("rsync called successfully")
